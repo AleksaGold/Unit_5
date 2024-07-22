@@ -14,8 +14,8 @@ EMPLOYERS = {'65': 'Московский аэропорт Домодедово',
              '920692': 'Фонд Сколково',
              '895945': 'Правительство Москвы'
              }
-AREA = 1
-VACANCY_ONLY_WITH_SALARY = True
+AREA = 1  # регион для поиска вакансий
+VACANCY_ONLY_WITH_SALARY = True  # флаг для отбора вакансий только с указанной ЗП
 
 
 def config(filename='database.ini', section='postgresql'):

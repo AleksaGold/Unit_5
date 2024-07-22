@@ -73,7 +73,8 @@ def save_data_to_database(employers: list[dict], vacancies: list[dict], params: 
             for vacancy in vacancies:
                 with conn.cursor() as cur:
                     cur.execute(
-                        """INSERT INTO vacancies (vacancy_name, salary_from, salary_to, currency, vacancies_url, employer_id) 
+                        """INSERT INTO vacancies 
+                        (vacancy_name, salary_from, salary_to, currency, vacancies_url, employer_id) 
                         VALUES (%s, %s, %s, %s, %s, %s) 
                         RETURNING vacancy_id
                         """,
